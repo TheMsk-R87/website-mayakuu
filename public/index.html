@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pertamaku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGASI -->
+    <nav class="navbar">
+        <div class="logo">🌟 WebKu</div>
+        <ul class="nav-links">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <h1>Halo! Selamat Datang 👋</h1>
+            <p>Ini adalah website pertama saya yang dibuat dengan Node.js dan di-deploy ke Vercel!</p>
+            <a href="#tentang" class="btn">Kenali Saya</a>
+        </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="tentang">
+        <h2>✨ Tentang Saya</h2>
+        <div class="tentang-content">
+            <div class="tentang-card">
+                <div class="emoji">👨‍💻</div>
+                <h3>Pemula yang Semangat</h3>
+                <p>Saya sedang belajar web development dan ini adalah project pertama saya. 
+                   Dibuat menggunakan GitHub Codespace dari HP Android!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYANAN / SKILL -->
+    <section id="layanan" class="layanan">
+        <h2>🚀 Yang Sedang Saya Pelajari</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-emoji">📱</div>
+                <h3>HTML & CSS</h3>
+                <p>Membuat tampilan website yang menarik dan responsif</p>
+            </div>
+            <div class="card">
+                <div class="card-emoji">⚡</div>
+                <h3>JavaScript</h3>
+                <p>Menambahkan interaksi dan logika pada website</p>
+            </div>
+            <div class="card">
+                <div class="card-emoji">🛠️</div>
+                <h3>Node.js</h3>
+                <p>Membuat server backend untuk website</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="kontak">
+        <h2>📬 Hubungi Saya</h2>
+        <form class="contact-form" onsubmit="kirimPesan(event)">
+            <input type="text" placeholder="Nama kamu" required>
+            <input type="email" placeholder="Email kamu" required>
+            <textarea placeholder="Tulis pesan..." rows="4" required></textarea>
+            <button type="submit" class="btn">Kirim Pesan 🚀</button>
+        </form>
+        <div id="pesan-sukses" class="sukses" style="display:none;">
+            ✅ Terima kasih! Pesan kamu sudah terkirim (simulasi).
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Dibuat dengan ❤️ oleh Saya | 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

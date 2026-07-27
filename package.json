@@ -1,0 +1,28 @@
+{
+  "name": "website-pertamaku",
+  "version": "1.0.0",
+  "description": "Website pertama saya",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "express": "^4.22.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheMsk-R87/website-mayakuu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/TheMsk-R87/website-mayakuu/issues"
+  },
+  "homepage": "https://github.com/TheMsk-R87/website-mayakuu#readme"
+}
