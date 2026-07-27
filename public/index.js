@@ -2,16 +2,22 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Supaya bisa baca file di folder "public"
-app.use(express.static(path.join(__dirname, 'public')));
+// Gunakan process.cwd() agar jalan di Vercel dan lokal
+app.use(express.static(path.join(process.cwd(), 'public')));
 
-// Halaman utama
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(process.cwd(), 'public', 'index.html'));
 });
 
-// Jalankan server
+// Kalau akses halaman lain, tetap arahkan ke index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(process.cwd(), 'public', 'index.html'));
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`✅ Server berjalan di http://localhost:${PORT}`);
+  console.log('✅ Server jalan di port ' + PORT);
 });
+
+// Penting untuk Vercel!
+module.exports = app;
